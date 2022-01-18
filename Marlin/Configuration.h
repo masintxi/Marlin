@@ -97,6 +97,7 @@
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
   #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V2_0
+  //#define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V3_0
 #endif
 
 /**
@@ -187,6 +188,14 @@
 #if LINEAR_AXES >= 6
   #define AXIS6_NAME 'C' // :['A', 'B', 'C', 'U', 'V', 'W']
 #endif
+
+/**
+ * Se define la variable DIAG_JUMPERS_REMOVED para quitar un warning en
+ * la compilacion. Simplente es un recordatorio de que hay que quitar 
+ * los jumpers de los drivers si no se utilizan como finales de carrera
+ */
+#define DIAG_JUMPERS_REMOVED
+
 
 // @section extruder
 
