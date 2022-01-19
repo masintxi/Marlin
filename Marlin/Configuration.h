@@ -96,6 +96,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
+  //#define MOTHERBOARD BOARD_BRICOLEMON_LITE_V1_0
   #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V2_0
   //#define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V3_0
 #endif
@@ -1203,7 +1204,7 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)
+#define Z_PROBE_FEEDRATE_FAST (10*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
