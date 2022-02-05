@@ -49,7 +49,7 @@ MarlinUI ui;
   #include "e3v2/creality/dwin.h"
 #elif ENABLED(DWIN_CREALITY_LCD_ENHANCED)
   #include "fontutils.h"
-  #include "e3v2/enhanced/dwin.h"
+  #include "e3v2/proui/dwin.h"
 #elif ENABLED(DWIN_CREALITY_LCD_JYERSUI)
   #include "e3v2/jyersui/dwin.h"
 #endif
@@ -104,7 +104,7 @@ constexpr uint8_t epps = ENCODER_PULSES_PER_STEP;
 #endif
 
 #if HAS_LCD_BRIGHTNESS
-  uint8_t MarlinUI::brightness = DEFAULT_LCD_BRIGHTNESS;
+  uint8_t MarlinUI::brightness = LCD_BRIGHTNESS_DEFAULT;
   bool MarlinUI::backlight = true;
 
   void MarlinUI::set_brightness(const uint8_t value) {
@@ -704,7 +704,8 @@ void MarlinUI::init() {
     TERN_(HAS_MARLINUI_MENU, refresh());
 
     #if HAS_ENCODER_ACTION
-      if (clear_buttons) buttons = 0;
+      if (clear_buttons)
+        TERN_(HAS_ADC_BUTTONS, keypad_buttons =) buttons = 0;
       next_button_update_ms = millis() + 500;
     #else
       UNUSED(clear_buttons);
