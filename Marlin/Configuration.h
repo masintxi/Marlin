@@ -97,8 +97,8 @@
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
   //#define MOTHERBOARD BOARD_BRICOLEMON_LITE_V1_0
-  #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V2_0
-  //#define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V3_0
+  //#define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V2_0
+  #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V3_0
 #endif
 
 /**
