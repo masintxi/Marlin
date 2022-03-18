@@ -54,8 +54,8 @@
 //
 #define X_STOP_PIN                          PC0   // X-STOP
 #define Y_STOP_PIN                          PC1   // Y-STOP
-//#define Z_STOP_PIN                          PC2   // Z-STOP
-#define Z_MAX_PIN                          PC2   // Z-STOP
+//#define Z_STOP_PIN                        PC2   // Z-STOP
+#define Z_MAX_PIN                           PC2   // Z-STOP
 
 //
 // Z Probe must be this pin
@@ -133,6 +133,7 @@
 //
 #define TEMP_0_PIN                          PA0   // Analog Input "TH0"
 #define TEMP_BED_PIN                        PC4   // Analog Input "TB0"
+//#define TEMP_CHAMBER_PIN                          PC4
 
 //
 // Heaters / Fans
