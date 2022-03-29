@@ -133,7 +133,7 @@
 //
 #define TEMP_0_PIN                          PA0   // Analog Input "TH0"
 #define TEMP_BED_PIN                        PC4   // Analog Input "TB0"
-//#define TEMP_CHAMBER_PIN                          PC4
+#define TEMP_BOARD_PIN                      PC4
 
 //
 // Heaters / Fans
